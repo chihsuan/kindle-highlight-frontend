@@ -5,7 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react"
 import { API_HOST } from "../constants"
 import { useTokenState } from "../data/persist"
 import theme from "../constants/theme"
-import Header from "../component/header"
+import Header from "../component/Header"
 
 
 

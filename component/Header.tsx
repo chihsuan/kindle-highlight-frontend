@@ -21,11 +21,11 @@ const Header = () => {
       borderBottom="1px solid"
       borderColor="gray.300"
       alignItems="center"
-      padding="0 16px"
+      padding="0 45px"
     >
       <Flex flex={1}>
         <Link to="/">
-          <Heading fontWeight="400" fontSize="lg">Kindle Highlight</Heading>
+          <Heading fontWeight="600" fontSize="lg">Kindle Highlights</Heading>
         </Link>
       </Flex>
       { token &&
