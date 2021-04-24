@@ -3,7 +3,7 @@ import Router from "next/router";
 import { useEffect } from 'react';
 import useFetch from 'use-http';
 
-import { GOOGLE_CLINET_ID, CONTACT_FROM_URI } from '../constants';
+import { GOOGLE_CLINET_ID, CONTACT_FROM_URI  } from '../constants';
 import { useTokenState } from '../data/persist';
 import { Box, Flex, Heading, Text } from '@chakra-ui/layout';
 import { Button, FormControl, FormErrorMessage, FormHelperText, FormLabel, Image, Input, Textarea } from "@chakra-ui/react";
@@ -158,9 +158,6 @@ const Home = () => {
           )}
           </Formik>
         </Flex>
-      </Flex>
-      <Flex height="100" padding="24px" alignItems="center">
-        <Text fontSize="sm" color="gray.600">©2021 Kindle Highlights</Text>
       </Flex>
     </Flex>
   );

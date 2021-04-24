@@ -38,7 +38,7 @@ const ReadHistory = () => {
   }
 
   return (
-    <Flex maxWidth={1300} width="100%" margin="auto">
+    <Flex flexDirection={['column', 'row']} maxWidth={1400} width="100%" margin="auto">
       <Flex 
         left="30px"
         flexDirection="column"
@@ -50,7 +50,7 @@ const ReadHistory = () => {
             <Flex
               key={readingHistory.id}
               margin="10px 0 18px"
-              width={300}
+              width={['100%', 300]}
               backgroundColor={activeReadingHistory && readingHistory.id === activeReadingHistory.id ? "gray.50" : "white"}
               onClick={() => onClickReadingHistory(readingHistory)}
             >
@@ -61,7 +61,7 @@ const ReadHistory = () => {
           )) 
         }
       </Flex>
-      <Flex flex={3} flexDirection="column" minWidth={500} margin="30px">
+      <Flex flex={3} flexDirection="column" minWidth={['100%', 500]} margin="30px">
         { activeReadingHistory && <Heading as="h2" size="lg">{ activeReadingHistory.name }</Heading> }
         
         { activeReadingHistory &&
