@@ -1,5 +1,5 @@
 import { Avatar, Text } from '@chakra-ui/react';
-import { Box, Flex, Heading, Link } from '@chakra-ui/layout';
+import { Flex, Heading, Link } from '@chakra-ui/layout';
 import { useEffect, useState } from 'react';
 import useFetch from 'use-http';
 
@@ -38,13 +38,19 @@ const ReadHistory = () => {
   }
 
   return (
-    <Flex width="50%" maxW="1300px" margin="auto">
-      <Flex left="30px" position="fixed" flexDirection="column" width={350} padding="32px 16px">
+    <Flex maxWidth={1300} width="100%" margin="auto">
+      <Flex 
+        left="30px"
+        flexDirection="column"
+        padding="32px 16px"
+        flex={1}
+      >
         <Text color="gray.500" fontWeight="bold" casing="uppercase">Your Reading Histories</Text>
         { readHistories.map(readingHistory => (
             <Flex
               key={readingHistory.id}
               margin="10px 0 18px"
+              width={300}
               backgroundColor={activeReadingHistory && readingHistory.id === activeReadingHistory.id ? "gray.50" : "white"}
               onClick={() => onClickReadingHistory(readingHistory)}
             >
@@ -55,7 +61,7 @@ const ReadHistory = () => {
           )) 
         }
       </Flex>
-      <Flex flexDirection="column" width="100%" margin="30px">
+      <Flex flex={3} flexDirection="column" minWidth={500} margin="30px">
         { activeReadingHistory && <Heading as="h2" size="lg">{ activeReadingHistory.name }</Heading> }
         
         { activeReadingHistory &&
