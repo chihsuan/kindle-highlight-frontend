@@ -25,7 +25,7 @@ const Header = () => {
     >
       <Flex flex={1}>
         <Link to="/">
-          <Heading fontWeight="600" fontSize="lg">Kindle Highlights</Heading>
+          <Heading fontWeight="600" fontSize="lg">Highlight Reader</Heading>
         </Link>
       </Flex>
       { token &&

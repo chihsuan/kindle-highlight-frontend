@@ -1,4 +1,5 @@
 import * as React from "react"
+import Head from 'next/head'
 import { Provider } from 'use-http'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from "@chakra-ui/react"
@@ -19,6 +20,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <Provider url={API_HOST} options={options}>
+      <Head>
+        <title>Highlight Reader</title>
+      </Head>
       <ChakraProvider theme={theme}>
         <Header />
         <Component {...pageProps} />
