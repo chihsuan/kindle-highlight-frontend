@@ -1,15 +1,22 @@
-import { Avatar, Text } from '@chakra-ui/react';
+import { Avatar, Spinner, Text, Image } from '@chakra-ui/react';
 import { Flex, Heading, Link } from '@chakra-ui/layout';
 import { useEffect, useState } from 'react';
 import useFetch from 'use-http';
+import { useTokenState } from '../../data/persist';
+import { useRouter } from 'next/router';
 
 const ReadHistory = () => {
   const [readHistories, setReadHistories] = useState([]);
   const [activeReadingHistory, setActiveReadingHistory] = useState<any>();
   const [highlights, setHighlights] = useState([]);
-  const { get, response } = useFetch();
+  const { get, response, loading } = useFetch();
+  const [token,] = useTokenState();
+  const router = useRouter()
 
   useEffect(() => {
+    if (!token) {
+      router.push("/");
+    }
     loadBooks();
   }, []);
 
@@ -35,6 +42,23 @@ const ReadHistory = () => {
 
   const onClickReadingHistory = async (readingHistory) => {
     setActiveReadingHistory(readingHistory)
+  }
+
+  if (loading) {
+    return (
+      <Flex justifyContent="center" alignItems="center">
+        <Spinner size="md" />
+      </Flex>
+    );
+  }
+
+  if (readHistories.length == 0) {
+    return (
+      <Flex flexDirection="column" justifyContent="center" alignItems="center" paddingTop={10}>
+        <Image marginBottom={10} maxWidth="300px" width="100%" minWidth={300} src="/undraw_mail_2_tqip.svg" alt="" />
+        <Text>Email kindle exports to &quot;kindle.highlight.parser@gmail.com&quot; to see your highlights!</Text>
+      </Flex>
+    )
   }
 
   return (
