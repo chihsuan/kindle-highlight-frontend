@@ -62,7 +62,7 @@ const ReadHistory = () => {
   }
 
   return (
-    <Flex flexDirection={['column', 'row']} maxWidth={1400} width="100%" margin="auto">
+    <Flex flexDirection={['column', 'row']} maxWidth={1400} width="100%" minHeight="80vh" margin="auto">
       <Flex 
         left="30px"
         flexDirection="column"
