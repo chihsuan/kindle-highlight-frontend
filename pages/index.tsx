@@ -60,12 +60,12 @@ const Home = () => {
 
   return (
     <Flex flexDirection="column">
-      <Flex flexDirection="column" alignItems="center" paddingTop={100} minHeight="85vh" marginBottom={10}>
+      <Flex flexDirection="column" alignItems="center" paddingTop={100} minHeight="85vh" marginBottom={0}>
           <Box marginBottom={5}>
             <Image maxWidth="500px" width="100%" minWidth={300} src="/undraw_book_lover_mkck.svg" alt="" />
           </Box>
           <Heading fontWeight="700" fontFamily="'Source Serif Pro'" textAlign="center" as="h2" size="xl">
-            Get Your Kindle Highlights
+            Manage Your Kindle Highlights
           </Heading>
           <Box maxWidth={800} marginTop={1}>
             <Text textAlign="center" color="gray.700" fontSize="xs">
@@ -81,7 +81,7 @@ const Home = () => {
               scope="openid"
               render={(renderProps) => (
                 <Button colorScheme="purple" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-                  Login with Google
+                  Continue with Google
                 </Button>
               )}
             >
@@ -108,11 +108,16 @@ const Home = () => {
         <Flex flexDirection="column" alignItems="center" marginTop={10} height={400}>
           <Image marginBottom={5} maxWidth={300} minWidth={300} src="/undraw_Online_information_re_erks.svg" alt="" />
           <Text textAlign="center" color="gray.700">
-            3. Sign in the website and get your highlights!
+            3. Sign in and get your highlights!
           </Text>
         </Flex>
       </Flex>
-    
+
+      <Flex flexDirection="column" justifyContent="center" alignItems="center" marginBottom={20}>
+        <Heading as="h3" size="lg" fontFamily="'Source Serif Pro'">Demo</Heading>
+        <Image marginTop={10} maxWidth="800px" width="90%" minWidth={250} height="100%" src="/demo.png" alt="" />
+      </Flex>
+
       <Flex flexDirection="column" alignItems="center" marginBottom={20}>
         <Heading as="h3" size="lg" fontFamily="'Source Serif Pro'">Contact Us</Heading>
         <Text>Want any features? Tell us!</Text>
