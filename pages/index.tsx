@@ -101,14 +101,14 @@ const Home = () => {
         <Flex flexDirection="column" alignItems="center" height={400}>
           <Image marginBottom={5} maxWidth={300} minWidth={300} src="/undraw_emails_6uqr.svg" alt="" />
           <Text textAlign="center" color="gray.700">
-            2. Export your highlights and email to &quot;kindle.highlight.parser@gmail.com&quot;
+            2. Export your highlights to your gmail address and forward it to &quot;kindle.highlight.parser@gmail.com&quot;
           </Text>
         </Flex>
   
         <Flex flexDirection="column" alignItems="center" marginTop={10} height={400}>
           <Image marginBottom={5} maxWidth={300} minWidth={300} src="/undraw_Online_information_re_erks.svg" alt="" />
           <Text textAlign="center" color="gray.700">
-            3. Sign in and get your highlights!
+            3. Sign in our website with your gmail address.  All highlights are organized for you.  
           </Text>
         </Flex>
       </Flex>
