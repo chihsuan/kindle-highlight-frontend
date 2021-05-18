@@ -72,7 +72,7 @@ const Home = () => {
               No need to manually copy-and-paste reading highlights anymore
             </Text>
           </Box>
-          <Box marginTop={5}>
+          <Flex marginTop={5} flexDirection="column" justifyContent="center" alignItems="center">
             <GoogleLogin
               clientId={GOOGLE_CLINET_ID}
               onSuccess={onSuccess}
@@ -86,7 +86,12 @@ const Home = () => {
               )}
             >
             </GoogleLogin>
-          </Box>
+            <Box maxWidth={400} width="100%" paddingTop={2}>
+              <Text textAlign="center" fontSize="xs" color="gray.500">
+              As long as you sign in with Google, you can use the service for free. No credit cards or other personal information required.
+              </Text>
+            </Box>
+          </Flex>
       </Flex>
 
       <Flex flexDirection="column" alignItems="center">
