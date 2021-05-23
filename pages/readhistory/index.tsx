@@ -56,7 +56,7 @@ const ReadHistory = () => {
     return (
       <Flex flexDirection="column" justifyContent="center" alignItems="center" paddingTop={10}>
         <Image marginBottom={10} maxWidth="300px" width="100%" minWidth={300} src="/undraw_mail_2_tqip.svg" alt="" />
-        <Text>Email kindle exports to &quot;kindle.highlight.parser@gmail.com&quot; to see your highlights!</Text>
+        <Text>We can&quot;t find your data. If you just forward the email to us, we will email you when it&quot;s ready. (Usually 30-60 seconds)</Text>
       </Flex>
     )
   }
